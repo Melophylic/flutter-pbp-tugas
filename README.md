@@ -68,7 +68,7 @@ Selanjutnya, saya membuat file `cars.dart` di folder `lib` untuk mendefinisikan 
 Saya mulai dengan membuat kelas MyHomePage sebagai Stateless Widget. Di dalam kelas ini, saya mendefinisikan beberapa variabel untuk menampilkan informasi pengguna seperti NPM, Nama, dan Kelas. Saya juga membuat daftar items yang menyimpan tiga opsi utama aplikasi, yaitu "Lihat Daftar Produk," "Tambah Produk," dan "Logout," yang masing-masing dilengkapi ikon yang sudah ada dari flutter.
 
 ### Membuat Struktur Tampilan di build()
-Dalam metode `build()`, saya menggunakan widget `Scaffold` untuk membangun struktur utama halaman. Saya menambahkan AppBar dengan judul "Car Commerce" dan membuat bagian body halaman menggunakan `SingleChildScrollView` agar konten bisa di scroll agar tidak overflow. 
+Dalam metode `build()`, saya menggunakan widget `Scaffold` untuk membangun struktur utama halaman. Saya menambahkan AppBar dengan judul "Car Commerce" dan membuat bagian body halaman menggunakan `SingleChildScrollView` agar konten bisa di scroll dan tidak overflow. 
 
 ### Membuat Widget InfoCard untuk Menampilkan Informasi Pengguna
 Saya membuat widget `InfoCard`, yang digunakan untuk menampilkan informasi NPM, Nama, dan Kelas pengguna. Kartu ini terdiri dari `Card` dengan `Container` yang memiliki teks judul dan konten. `InfoCard` menerima parameter title dan content yang akan diisi sesuai informasi pengguna.
