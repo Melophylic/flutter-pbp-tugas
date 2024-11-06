@@ -28,11 +28,13 @@ Dalam proyek ini, beberapa widget yang digunakan adalah:
 
 ## Fungsi dari setState()
 
-`setState()` adalah fungsi dalam StatefulWidget yang digunakan untuk memperbarui UI saat terjadi perubahan pada state widget. Saat `setState()` dipanggil, Flutter akan merender ulang widget sehingga perubahan tersebut tampil di layar. Misalnya, jika terdapat variabel boolean yang menentukan apakah produk ditampilkan atau tidak, `setState()` memungkinkan UI untuk mengikuti nilai terbaru dari variabel tersebut.
+`setState()` adalah fungsi dalam StatefulWidget yang digunakan untuk memperbarui UI saat terjadi perubahan pada state widget. 
+Saat `setState()` dipanggil, Flutter akan merender ulang widget sehingga perubahan tersebut tampil di layar. Misalnya, jika terdapat variabel boolean yang menentukan apakah produk ditampilkan atau tidak, `setState()` memungkinkan UI untuk mengikuti nilai terbaru dari variabel tersebut.
 
 ## Perbedaan antara const dan final
 
 `const`: Digunakan untuk nilai yang sudah ditentukan saat kompilasi dan tidak dapat diubah. Nilai dari const harus diketahui pada waktu kompilasi.
+
 `final`: Menyediakan nilai yang hanya diinisialisasi sekali, tetapi dapat ditentukan pada runtime. Dengan final, kita dapat membuat variabel yang tidak dapat diubah setelah inisialisasi, namun nilainya bisa diperoleh saat aplikasi berjalan.
 
 ## Cara pengimplementasian
