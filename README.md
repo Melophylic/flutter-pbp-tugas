@@ -13,17 +13,29 @@ Perbedaan utama antara keduanya adalah bahwa `StatelessWidget` bersifat statis d
 Dalam proyek ini, beberapa widget yang digunakan adalah:
 
 `Scaffold`: Berfungsi sebagai struktur dasar halaman, menyediakan elemen seperti AppBar dan body untuk tampilan utama aplikasi.
+
 `AppBar`: Menampilkan bilah aplikasi di bagian atas layar dengan judul “Car Commerce”.
+
 `SingleChildScrollView`: Membungkus konten untuk memungkinkan pengguliran jika melebihi ukuran layar, dengan jarak (padding) di sekelilingnya.
+
 `Column`: Menyusun widget secara vertikal di dalam body halaman.
+
 `Wrap`: Menampilkan widget InfoCard secara horizontal dengan tata letak fleksibel sesuai ukuran layar.
+
 `InfoCard` (_custom widget_): Komponen kartu yang digunakan untuk menampilkan informasi seperti NPM, Nama, dan Kelas.
+
 `Card`: Menyediakan elemen berbentuk kartu dengan efek bayangan (elevasi) untuk tampilan yang lebih interaktif.
+
 `GridView`.count: Membuat grid dengan jumlah kolom yang ditentukan (dalam hal ini 3 kolom) untuk menyusun widget ItemCard secara teratur.
+
 `ItemCard` (_custom widget_): Komponen kartu yang menampilkan ikon dan teks yang disesuaikan untuk setiap tombol pilihan seperti "Lihat Daftar Produk", "Tambah Produk", dan "Logout".
+
 `Material`: Digunakan sebagai latar belakang pada kartu ItemCard dan memungkinkan penerapan warna sesuai tema aplikasi.
+
 `InkWell`: Menyediakan efek sentuhan (tappable) pada kartu ItemCard untuk interaksi pengguna, menampilkan SnackBar saat ditekan.
+
 `Icon`: Menampilkan ikon di dalam ItemCard untuk menggambarkan fungsi masing-masing tombol.
+
 `Text`: Menampilkan teks pada AppBar, InfoCard, dan ItemCard sebagai judul dan konten yang relevan.
 
 ## Fungsi dari setState()
