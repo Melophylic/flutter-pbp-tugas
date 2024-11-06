@@ -1,4 +1,4 @@
-# carcommerce
+# Tugas 7
 
 ## Stateless Widget dan Stateful Widget
 
@@ -6,7 +6,7 @@
 
 Sedangkan, `Stateful Widget` memungkinkan perubahan tampilan UI berdasarkan state atau kondisi yang dapat berubah saat aplikasi dijalankan. Widget ini terdiri dari dua kelas: satu untuk widget-nya, dan satu lagi untuk state yang dapat diubah. Dengan StatefulWidget, kita dapat menggunakan fungsi setState() untuk memperbarui UI sesuai dengan data baru.
 
-Perbedaan utama antara keduanya adalah bahwa StatelessWidget bersifat statis dan tidak mengalami perubahan, sementara StatefulWidget mendukung perubahan UI secara dinamis.
+Perbedaan utama antara keduanya adalah bahwa `StatelessWidget` bersifat statis dan tidak mengalami perubahan, sementara `StatefulWidget` mendukung perubahan UI secara dinamis.
 
 ## Widget yang Digunakan dalam Proyek
 
@@ -34,3 +34,36 @@ Dalam proyek ini, beberapa widget yang digunakan adalah:
 
 `const`: Digunakan untuk nilai yang sudah ditentukan saat kompilasi dan tidak dapat diubah. Nilai dari const harus diketahui pada waktu kompilasi.
 `final`: Menyediakan nilai yang hanya diinisialisasi sekali, tetapi dapat ditentukan pada runtime. Dengan final, kita dapat membuat variabel yang tidak dapat diubah setelah inisialisasi, namun nilainya bisa diperoleh saat aplikasi berjalan.
+
+## Cara pengimplementasian
+
+### Membuat Proyek Flutter Baru
+Saya memulai dengan membuka terminal dan membuat proyek Flutter baru menggunakan perintah:
+```
+flutter create car_commerce
+```
+Setelah proses selesai, saya membuka proyek ini di editor kode untuk memulai pengembangan aplikasi.
+
+### Menyiapkan Struktur Dasar di main.dart
+Setelah itu, saya membuka file `main.dart` di folder `lib` dan membersihkan semua kode bawaan yang ada. Kemudian, saya mengimpor file `cars.dart` (yang akan saya buat nanti) dan menambahkan struktur dasar aplikasi, termasuk fungsi utama (main) untuk menjalankan aplikasi. Berikut kode dasarnya. pada file ini, saya membuat kelas `MyApp` sebagai root aplikasi dan mengatur theme aplikasi dengan warna utama (orange) dan warna sekunder (deep orange).
+
+### Membuat Halaman Utama di cars.dart
+Selanjutnya, saya membuat file `cars.dart` di folder `lib` untuk mendefinisikan halaman utama aplikasi `(MyHomePage)`, yang akan menampilkan informasi pengguna dan beberapa tombol utama aplikasi.
+
+### Menambahkan Variabel dan Data di MyHomePage
+Saya mulai dengan membuat kelas MyHomePage sebagai Stateless Widget. Di dalam kelas ini, saya mendefinisikan beberapa variabel untuk menampilkan informasi pengguna seperti NPM, Nama, dan Kelas. Saya juga membuat daftar items yang menyimpan tiga opsi utama aplikasi, yaitu "Lihat Daftar Produk," "Tambah Produk," dan "Logout," yang masing-masing dilengkapi ikon yang sudah ada dari flutter.
+
+### Membuat Struktur Tampilan di build()
+Dalam metode `build()`, saya menggunakan widget `Scaffold` untuk membangun struktur utama halaman. Saya menambahkan AppBar dengan judul "Car Commerce" dan membuat bagian body halaman menggunakan `SingleChildScrollView` agar konten bisa di scroll agar tidak overflow. 
+
+### Membuat Widget InfoCard untuk Menampilkan Informasi Pengguna
+Saya membuat widget `InfoCard`, yang digunakan untuk menampilkan informasi NPM, Nama, dan Kelas pengguna. Kartu ini terdiri dari `Card` dengan `Container` yang memiliki teks judul dan konten. `InfoCard` menerima parameter title dan content yang akan diisi sesuai informasi pengguna.
+
+### Menambahkan InfoCard ke Halaman Utama
+Di dalam `Column` pada body, saya menambahkan Wrap untuk menampilkan tiga `InfoCard` secara horizontal, masing-masing berisi informasi NPM, Nama, dan Kelas.
+
+### Membuat Widget ItemCard untuk Setiap Tombol Utama
+Saya kemudian membuat widget `ItemCard` yang menerima objek `ItemHomepage` sebagai parameter. Setiap `ItemCard` akan memiliki ikon dan teks dari items yang telah saya buat sebelumnya. Saya juga menambahkan InkWell untuk memberikan efek sentuhan serta menampilkan `SnackBar` saat tombol ditekan.
+
+### Mengatur Tombol dalam GridView di Halaman Utama
+Saya menambahkan `GridView.count` dalam `Column` untuk menampilkan `ItemCard` dalam bentuk grid dengan tiga kolom, menampilkan opsi “Lihat Daftar Produk,” “Tambah Produk,” dan “Logout”.
