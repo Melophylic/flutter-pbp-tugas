@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Car Commerce',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.orange).copyWith(
-          secondary: Colors.deepOrange[400],
+          secondary: Colors.orangeAccent,
         ),
         useMaterial3: true,
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:carcommerce/widgets/left_drawer.dart';
 
 class MyHomePage extends StatelessWidget {
   /// VARIABLES ///
@@ -7,8 +8,8 @@ class MyHomePage extends StatelessWidget {
   final String className = 'PBP E';
 
   final List<ItemHomepage> items = [
-    ItemHomepage("Lihat Daftar Produk", Icons.car_rental),
-    ItemHomepage("Tambah Produk", Icons.add),
+    ItemHomepage("Lihat Daftar Mobil", Icons.car_rental),
+    ItemHomepage("Tambah Mobil", Icons.add),
     ItemHomepage("Logout", Icons.logout)
   ];
 
@@ -27,8 +28,10 @@ class MyHomePage extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
+        iconTheme: const IconThemeData(color: Colors.white),
         backgroundColor: Theme.of(context).colorScheme.primary,
       ),
+      drawer: const LeftDrawer(),
       // Body halaman dengan padding di sekelilingnya.
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
@@ -65,6 +68,7 @@ class MyHomePage extends StatelessWidget {
                     mainAxisSpacing: 10,
                     crossAxisCount: 3,
                     shrinkWrap: true,
+
                     children: items.map((ItemHomepage item) {
                       return ItemCard(item);
                     }).toList(),
