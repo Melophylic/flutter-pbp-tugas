@@ -70,11 +70,11 @@ Namun, Keduanya dapat mengandung widget lain seperti `Text`, `Icon`, atau `Conta
 
 ## Sebutkan apa saja elemen input yang kamu gunakan pada halaman form yang kamu buat pada tugas kali ini. Apakah terdapat elemen input Flutter lain yang tidak kamu gunakan pada tugas ini? Jelaskan!
 
-Pada form yang saya buat, elemen input yang digunakan adalah:
+### Pada form yang saya buat, elemen input yang digunakan adalah:
 
 `TextFormField`: Untuk input teks dari pengguna, seperti nama atau email.
 
-Sedangkan yang tidak saya gunakan ada:
+### Sedangkan yang tidak saya gunakan ada:
 
 `Checkbox`: Untuk memilih opsi dalam form.
 
