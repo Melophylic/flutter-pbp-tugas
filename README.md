@@ -127,7 +127,7 @@ onTap: () {
             },
 ```
 
-pushReplacement akan menukar stack teratas dengan stack yang baru agar isi dari stack semisal tidak ada yang lain masih tetap 1.
+`pushReplacement` akan menukar stack teratas dengan stack yang baru agar isi dari stack semisal tidak ada yang lain masih tetap 1.
 
 Navigasi ini memungkinkan kita untuk berpindah antar halaman dengan mudah, dan dapat juga disertai dengan animasi untuk transisi yang lebih mulus.
 
