@@ -1,3 +1,4 @@
+import 'package:carcommerce/screens/list_carentry.dart';
 import 'package:flutter/material.dart';
 import 'package:carcommerce/cars.dart';
 import 'package:carcommerce/screens/carsentry_form.dart';
@@ -53,7 +54,7 @@ class LeftDrawer extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.car_rental_rounded),
             title: const Text('Tambah Mobil'),
-            // Bagian redirection ke MoodEntryFormPage
+            // Bagian redirection ke MobilEntryFormPage
             onTap: () {
               Navigator.pushReplacement(
                   context,
@@ -61,6 +62,17 @@ class LeftDrawer extends StatelessWidget {
                     builder: (context) => const CarEntryFormPage(),
                   ));
             },
+          ),
+          ListTile(
+              leading: const Icon(Icons.add_reaction_rounded),
+              title: const Text('Daftar Mobil'),
+              onTap: () {
+                  // Route menu ke halaman Mobil
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const CarEntryPage()),
+                  );
+              },
           ),
         ],
       ),
