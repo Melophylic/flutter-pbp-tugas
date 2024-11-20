@@ -82,6 +82,39 @@ Tampilan: Nama user ditampilkan di halaman profil.
 
 Semoga penjelasan ini membantu buat memahami konsep dasar yang dipakai di tugas Flutter kamu!
 
+## Step by Step:
+
+1. Install Library yang Dibutuhkan
+Tambahkan http dan flutter_cookie_manager ke pubspec.yaml. Lakukan flutter pub get untuk update dependensi.
+
+
+2. Buat Model Data
+Bikin model Dart untuk mapping data JSON dari API ke class Dart. Biasanya sesuai dengan struktur respons API yang bakal diterima.
+
+
+3. Konfigurasi CookieRequest
+Gunakan CookieRequest dari flutter_cookie_manager untuk mengatur sesi pengguna. Pastikan semua request terkait login atau user session menggunakan instance ini.
+
+
+4. Buat Halaman untuk Fetch Data
+Implementasikan fungsi GET untuk mengambil data dari API. Tampilkan data ini di halaman dengan widget Flutter, seperti ListView.
+
+
+5. Tambahkan Form untuk Kirim Data
+Buat form input menggunakan widget Flutter (misalnya TextField). Ambil data dari form dan kirim ke API dengan metode POST menggunakan CookieRequest.
+
+
+6. Tangani Respons Server
+Pastikan respons API (baik GET maupun POST) ditangani dengan benar, termasuk validasi data dan error handling, lalu update UI sesuai respons.
+
+
+7. Integrasi dengan Semua Komponen
+Pastikan semua komponen (widget halaman, form, dll.) bisa akses instance CookieRequest, biasanya lewat state management.
+
+
+8. Testing
+Coba jalankan aplikasi, tes fungsi GET dan POST, dan cek apakah data tampil/terkirim sesuai.
+
 
 # Tugas 8
 
