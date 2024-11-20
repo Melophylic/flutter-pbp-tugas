@@ -1,3 +1,88 @@
+# Tugas 9
+
+## Kenapa Perlu Membuat Model untuk Pengambilan atau Pengiriman Data JSON?
+
+Di Flutter, model itu penting banget buat mempermudah kita kerja dengan data JSON dari API. Dengan model, data JSON bisa dipetakan ke dalam class Dart, sehingga lebih gampang diakses dan digunakan. 
+
+### Alasan lainnya:
+
+`Struktur data jelas`: Model bikin kita tahu struktur data yang diterima atau dikirim ke API.
+
+Minim typo: Kalau nggak ada model, kita harus akses data dengan cara manual pakai string key, yang rawan salah ketik.
+
+Kode lebih rapi: Jadi gampang di-maintain dan lebih reusable.
+
+### Kalau nggak bikin model dulu, aplikasi masih bisa jalan, tapi risikonya:
+
+Data jadi susah di-handle, apalagi kalau JSON-nya kompleks.
+
+Debugging ribet karena nggak ada struktur yang jelas.
+
+Performanya bisa lebih lambat karena harus parsing manual.
+
+
+## Fungsi Library http di Flutter
+
+Library http adalah tools di Flutter untuk komunikasi dengan API lewat protokol HTTP. Ini yang dipakai buat kirim request dan ambil data dari server. Fungsi utamanya:
+
+GET: Buat ambil data dari server (misalnya list produk, data user, dll).
+
+POST: Buat kirim data ke server (kayak data login atau form input).
+
+PUT/DELETE: Buat update atau hapus data di server.
+
+
+Secara sederhana, http ini adalah "jembatan" antara aplikasi Flutter kamu dengan API server.
+
+## Fungsi CookieRequest dan Kenapa Harus Dibagikan ke Semua Komponen
+
+CookieRequest itu semacam helper buat manajemen sesi HTTP di Flutter yang pakai cookie. Kalau aplikasi kamu butuh fitur login atau session-based data, CookieRequest bakal simpan cookie dari server untuk memastikan user tetap login selama sesi berlangsung.
+
+### Kenapa harus dibagi ke semua komponen?
+
+Manajemen status: Kalau setiap widget bikin instance sendiri, status login atau data sesi user bisa nggak sinkron.
+
+Efisiensi: Satu instance aja cukup untuk dipakai di semua bagian aplikasi.
+
+Biasanya, CookieRequest diinisialisasi di level global atau lewat state management (kayak Provider), jadi bisa diakses dari mana aja.
+
+## Mekanisme Pengiriman Data di Flutter (Dari Input Sampai Tampil)
+
+### Input Data:
+
+User masukkan data lewat form atau widget input (misalnya TextField).
+
+Data diambil menggunakan controller, misalnya TextEditingController.
+
+### Proses Pengiriman:
+
+Data dikirim ke server lewat library http (biasanya dengan metode POST).
+
+Data diubah ke format JSON sebelum dikirim.
+
+### Response dari Server:
+
+Server ngasih respons (biasanya juga dalam format JSON).
+
+Response diterima, di-parse, lalu diubah ke model Dart.
+
+### Tampilkan di UI:
+
+Data yang sudah diproses ditampilkan menggunakan widget Flutter, misalnya ListView atau Text.
+
+### Contoh Alur:
+
+Input: User isi form login.
+
+Pengiriman: Data login dikirim ke server lewat POST.
+
+Response: Server balikin data user (nama, email, dll).
+
+Tampilan: Nama user ditampilkan di halaman profil.
+
+Semoga penjelasan ini membantu buat memahami konsep dasar yang dipakai di tugas Flutter kamu!
+
+
 # Tugas 8
 
 ## Apa kegunaan const di Flutter? Jelaskan apa keuntungan ketika menggunakan const pada kode Flutter. Kapan sebaiknya kita menggunakan const, dan kapan sebaiknya tidak digunakan?
